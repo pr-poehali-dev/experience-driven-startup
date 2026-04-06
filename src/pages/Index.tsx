@@ -269,11 +269,7 @@ export default function Index() {
               <div className="absolute -inset-6 border border-gold opacity-5 rounded-sm"></div>
               <img src={CONSULTANT_PHOTO} alt="Антон Дмитриев" className="w-full h-full object-cover rounded-sm object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-40 rounded-sm"></div>
-              <div className="absolute -bottom-6 -left-6 bg-navy-light border border-gold-pale p-4">
-                <div className="font-display text-2xl text-gold font-semibold">№1</div>
-                <div className="text-cream-muted text-xs font-body">в рейтинге Forbes</div>
-                <div className="text-cream-muted text-xs">Sales Consultants 2025</div>
-              </div>
+
             </div>
           </div>
         </div>
