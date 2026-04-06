@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useToast } from "@/hooks/use-toast";
 import Icon from "@/components/ui/icon";
 
 const CONSULTANT_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/files/bde18629-da04-4fdb-aae5-f38d30d1bab5.jpg";
@@ -166,6 +167,34 @@ export default function Index() {
   const [activePackage, setActivePackage] = useState("growth");
   const [sessions, setSessions] = useState(4);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ name: "", contact: "", company: "", message: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!formData.name.trim() || !formData.contact.trim()) {
+      toast({ title: "Заполните имя и контакт", variant: "destructive" });
+      return;
+    }
+    setSending(true);
+    try {
+      const res = await fetch("https://functions.poehali.dev/ce0d01ee-3d45-44d5-893b-bc3689b3cfb8", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        toast({ title: "Заявка отправлена!", description: "Антон свяжется с вами в течение 4 часов." });
+        setFormData({ name: "", contact: "", company: "", message: "" });
+      } else {
+        throw new Error();
+      }
+    } catch {
+      toast({ title: "Ошибка отправки", description: "Попробуйте ещё раз или напишите напрямую.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
+  };
 
   const pkg = packages.find((p) => p.id === activePackage)!;
   const totalPrice = pkg.basePrice + (sessions - 1) * Math.round(pkg.basePrice * 0.12);
@@ -547,6 +576,8 @@ export default function Index() {
                   <input
                     type="text"
                     placeholder="Иван Иванов"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full bg-navy border border-gold-pale text-cream font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors placeholder:text-cream-muted placeholder:opacity-40"
                   />
                 </div>
@@ -555,6 +586,8 @@ export default function Index() {
                   <input
                     type="text"
                     placeholder="+7 999 000 00 00"
+                    value={formData.contact}
+                    onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                     className="w-full bg-navy border border-gold-pale text-cream font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors placeholder:text-cream-muted placeholder:opacity-40"
                   />
                 </div>
@@ -564,6 +597,8 @@ export default function Index() {
                 <input
                   type="text"
                   placeholder="ООО «Ромашка», производство"
+                  value={formData.company}
+                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="w-full bg-navy border border-gold-pale text-cream font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors placeholder:text-cream-muted placeholder:opacity-40"
                 />
               </div>
@@ -572,11 +607,13 @@ export default function Index() {
                 <textarea
                   rows={4}
                   placeholder="Опишите текущую ситуацию: что работает, что нет, цель на ближайшие 6 месяцев"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-navy border border-gold-pale text-cream font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors resize-none placeholder:text-cream-muted placeholder:opacity-40"
                 />
               </div>
-              <button className="btn-gold w-full text-sm py-4">
-                Отправить заявку на диагностику
+              <button className="btn-gold w-full text-sm py-4 disabled:opacity-50" onClick={handleSubmit} disabled={sending}>
+                {sending ? "Отправляем..." : "Отправить заявку на диагностику"}
               </button>
               <p className="text-cream-muted text-xs font-body text-center mt-4 opacity-60">
                 Отвечаю в течение 4 рабочих часов. Конфиденциально.

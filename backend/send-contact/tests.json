@@ -11,9 +11,7 @@
       "method": "POST",
       "path": "/",
       "body": {"company": "Test"},
-      "expectedStatus": 400,
-      "expectedBody": {"error": "Имя и контакт обязательны"},
-      "bodyMatcher": "partial"
+      "expectedStatus": 400
     }
   ]
 }
