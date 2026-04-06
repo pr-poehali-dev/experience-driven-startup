@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const CONSULTANT_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/files/d7c7f826-65d7-4fd0-8057-fd155b2b0dbe.jpg";
+const CONSULTANT_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/64c4fc48-f6af-466e-95ad-dae0f0c625f8.jpg";
 const MEETING_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/files/b3d229a9-0010-403e-b9df-22b4de374861.jpg";
 
 const services = [
@@ -191,7 +191,7 @@ export default function Index() {
                 <div className="w-full h-px bg-gold"></div>
                 <div className="w-3/4 h-px bg-gold opacity-60"></div>
               </div>
-              <span className="font-display text-lg font-semibold text-cream tracking-wide">А. Громов</span>
+              <span className="font-display text-lg font-semibold text-cream tracking-wide">А. Дмитриев</span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
@@ -242,7 +242,7 @@ export default function Index() {
               вашего бизнеса
             </h1>
             <p className="mt-6 text-cream-muted text-base lg:text-lg leading-relaxed max-w-lg animate-fade-up delay-200 font-body">
-              15 лет в B2B-продажах. 60+ реализованных проектов. Работаю с собственниками и коммерческими директорами, которые хотят предсказуемого роста — без иллюзий.
+              15 лет в B2B-продажах. 60+ реализованных проектов. Антон Дмитриев — работает с собственниками и коммерческими директорами, которые хотят предсказуемого роста — без иллюзий.
             </p>
             <div className="mt-10 flex flex-wrap gap-4 animate-fade-up delay-300">
               <a href="#calculator" className="btn-gold">Рассчитать стоимость</a>
@@ -267,7 +267,7 @@ export default function Index() {
             <div className="relative w-full aspect-[3/4] max-w-md ml-auto">
               <div className="absolute -inset-3 border border-gold opacity-10 rounded-sm"></div>
               <div className="absolute -inset-6 border border-gold opacity-5 rounded-sm"></div>
-              <img src={CONSULTANT_PHOTO} alt="Алексей Громов" className="w-full h-full object-cover rounded-sm" />
+              <img src={CONSULTANT_PHOTO} alt="Антон Дмитриев" className="w-full h-full object-cover rounded-sm object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-40 rounded-sm"></div>
               <div className="absolute -bottom-6 -left-6 bg-navy-light border border-gold-pale p-4">
                 <div className="font-display text-2xl text-gold font-semibold">№1</div>
@@ -598,7 +598,7 @@ export default function Index() {
               <div className="w-full h-px bg-gold"></div>
               <div className="w-3/4 h-px bg-gold opacity-60"></div>
             </div>
-            <span className="font-display text-lg text-cream">Алексей Громов</span>
+            <span className="font-display text-lg text-cream">Антон Дмитриев</span>
           </div>
           <div className="hidden md:flex gap-8">
             {navLinks.map((l) => (
