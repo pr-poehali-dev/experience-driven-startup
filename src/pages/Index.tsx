@@ -242,7 +242,7 @@ export default function Index() {
               вашего бизнеса
             </h1>
             <p className="mt-6 text-cream-muted text-base lg:text-lg leading-relaxed max-w-lg animate-fade-up delay-200 font-body">
-              15 лет в B2B-продажах. 60+ реализованных проектов. Антон Дмитриев — работает с собственниками и коммерческими директорами, которые хотят предсказуемого роста — без иллюзий.
+              20 лет в B2B и B2C продажах. Дистрибьюция продуктов питания, кондитерские изделия, вывод иностранных брендов на рынок России. Строю отделы продаж с нуля — под вашу нишу, а не по шаблону.
             </p>
             <div className="mt-10 flex flex-wrap gap-4 animate-fade-up delay-300">
               <a href="#calculator" className="btn-gold">Рассчитать стоимость</a>
@@ -251,9 +251,9 @@ export default function Index() {
 
             <div className="mt-14 grid grid-cols-3 gap-8 animate-fade-up delay-400">
               {[
-                { num: "60+", label: "проектов" },
-                { num: "15", label: "лет опыта" },
-                { num: "×2.4", label: "средний рост выручки" },
+                { num: "20+", label: "проектов" },
+                { num: "20", label: "лет опыта" },
+                { num: "B2B+B2C", label: "экспертиза" },
               ].map((s) => (
                 <div key={s.num}>
                   <div className="font-display text-3xl lg:text-4xl text-gold font-semibold">{s.num}</div>
