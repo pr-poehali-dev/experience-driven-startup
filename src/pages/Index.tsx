@@ -541,11 +541,11 @@ export default function Index() {
               {/* Верхняя часть: картинки одной высоты */}
               <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-8">
                 <div className="flex justify-center items-center h-64">
-                  <div className="w-48 h-48 rounded-full bg-white flex items-center justify-center shadow-lg">
+                  <div className="w-56 h-56 rounded-full bg-white flex items-center justify-center shadow-lg p-6">
                     <img
                       src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
                       alt="Alto Livello Russia"
-                      className="w-36 h-36 object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
