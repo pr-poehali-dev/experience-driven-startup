@@ -554,23 +554,72 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Contact */}
       {/* Brand Launch */}
       <section id="brands" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          {/* Header */}
           <AnimatedSection>
             <div className="text-center mb-16">
-              <span className="section-label">Новое направление</span>
+              <span className="section-label">Кейс — собственный бренд</span>
               <h2 className="font-display text-4xl lg:text-5xl text-cream mt-4 gold-line-center">
                 Запуск Брендов
               </h2>
-              <p className="text-cream-muted mt-8 max-w-xl mx-auto font-body text-sm leading-relaxed">
-                Полный цикл вывода нового бренда на рынок — от позиционирования и стратегии до первых продаж. Работаю с командой на всех этапах запуска.
+              <p className="text-cream-muted mt-8 max-w-2xl mx-auto font-body text-sm leading-relaxed">
+                Знаю о запуске брендов не только в теории — сам прошёл этот путь. Создал и вывел на рынок собственный премиальный бренд продуктов питания Alto Livello Russia.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {/* Brand showcase */}
+          <AnimatedSection>
+            <div className="luxury-card p-10 lg:p-14 grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <div className="flex items-center gap-4 mb-8">
+                  <img
+                    src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
+                    alt="Alto Livello Russia"
+                    className="h-24 object-contain"
+                  />
+                </div>
+                <p className="text-cream-muted text-sm font-body leading-relaxed mb-6">
+                  Alto Livello — «высший уровень» в переводе с итальянского. Бренд создан для российского рынка премиальных продуктов питания. Под этим брендом выпускаются макаронные изделия высшего качества, ориентированные на взыскательного покупателя.
+                </p>
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { value: "Premium", label: "Сегмент" },
+                    { value: "FMCG", label: "Категория" },
+                    { value: "Россия", label: "Рынок" },
+                  ].map((stat, i) => (
+                    <div key={i} className="text-center p-4 border border-gold-pale">
+                      <div className="font-display text-lg text-gold font-semibold">{stat.value}</div>
+                      <div className="text-cream-muted text-xs font-body mt-1 uppercase tracking-wider">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-display text-2xl text-cream mb-6">Что я сделал как основатель</h3>
+                {[
+                  { icon: "Lightbulb", text: "Разработал концепцию и позиционирование бренда в премиальном сегменте" },
+                  { icon: "Package", text: "Выстроил производственную цепочку и контроль качества продукции" },
+                  { icon: "Store", text: "Организовал дистрибуцию и вывод на полки розничных сетей" },
+                  { icon: "Users", text: "Сформировал команду продаж и выстроил коммерческую структуру" },
+                  { icon: "Award", text: "Добился признания качества продукта на профессиональном уровне" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-8 h-8 border border-gold-pale flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name={item.icon as "Award"} size={14} className="text-gold" fallback="Check" />
+                    </div>
+                    <p className="text-cream-muted text-sm font-body leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Services */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: "Compass", title: "Позиционирование", desc: "Определяем уникальное место бренда на рынке, целевую аудиторию и ключевое сообщение, которое отличает вас от конкурентов." },
               { icon: "Rocket", title: "Стратегия запуска", desc: "Разрабатываем пошаговый план выхода на рынок: каналы, бюджет, сроки и ключевые показатели успеха." },
@@ -588,38 +637,19 @@ export default function Index() {
             ))}
           </div>
 
+          {/* CTA */}
           <AnimatedSection>
-            <div className="luxury-card p-10 lg:p-14 grid lg:grid-cols-2 gap-10 items-center">
+            <div className="luxury-card p-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div>
-                <span className="section-label">Как это работает</span>
-                <h3 className="font-display text-3xl text-cream mt-4 mb-6">От идеи до первой выручки за 90 дней</h3>
-                <div className="space-y-4">
-                  {[
-                    "Аудит идеи и анализ рынка",
-                    "Разработка позиционирования и УТП",
-                    "Построение отдела продаж",
-                    "Запуск и сопровождение первых сделок",
-                  ].map((step, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <div className="w-6 h-6 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-gold text-xs font-semibold">{i + 1}</span>
-                      </div>
-                      <p className="text-cream-muted text-sm font-body leading-relaxed">{step}</p>
-                    </div>
-                  ))}
-                </div>
+                <h3 className="font-display text-2xl text-cream mb-2">Хотите запустить свой бренд?</h3>
+                <p className="text-cream-muted text-sm font-body">Помогу пройти путь от идеи до полки — опираясь на собственный опыт.</p>
               </div>
-              <div className="flex flex-col gap-6">
-                <div className="text-center p-6 border border-gold-pale">
-                  <div className="font-display text-5xl text-gold font-semibold">90</div>
-                  <div className="text-cream-muted text-xs font-body mt-2 uppercase tracking-wider">дней до результата</div>
-                </div>
-                <a href="#contact" className="btn-gold text-center py-4">
-                  Обсудить запуск бренда
-                </a>
-              </div>
+              <a href="#contact" className="btn-gold whitespace-nowrap py-4 px-10">
+                Обсудить запуск
+              </a>
             </div>
           </AnimatedSection>
+
         </div>
       </section>
 
