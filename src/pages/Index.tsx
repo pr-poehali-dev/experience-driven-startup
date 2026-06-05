@@ -630,9 +630,9 @@ export default function Index() {
             <div className="luxury-card p-8 lg:p-12 grid md:grid-cols-2 gap-8 items-center mb-12">
               <div className="flex justify-center">
                 <img
-                  src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/db1d8f52-858c-4ea9-8f57-f7f4a89d8632.png"
-                  alt="Диплом лауреата Лучший продукт 2023"
-                  className="h-72 object-contain drop-shadow-lg"
+                  src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/64ff038b-26d4-4898-9e6b-6f6f6bd66b6c.png"
+                  alt="Alto Livello — Золотая медаль ПродЭкспо 2023"
+                  className="h-80 object-contain drop-shadow-xl rounded-sm"
                 />
               </div>
               <div>
