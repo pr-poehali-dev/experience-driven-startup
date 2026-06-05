@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Icon from "@/components/ui/icon";
 
-const CONSULTANT_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/files/bb841540-e687-40d7-969e-2474ec4e5c91.jpg";
+const CONSULTANT_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/21888a33-d7a8-4cbd-9156-ffe439630488.jpeg";
 const MEETING_PHOTO = "https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/files/b3d229a9-0010-403e-b9df-22b4de374861.jpg";
 
 const services = [
