@@ -221,7 +221,7 @@ export default function Index() {
                 <div className="w-full h-px bg-gold"></div>
                 <div className="w-3/4 h-px bg-gold opacity-60"></div>
               </div>
-              <span className="font-display text-lg font-semibold tracking-wide" style={{ color: '#1a2640' }}>А. Дмитриев</span>
+              <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg font-semibold tracking-wide cursor-pointer" style={{ color: '#1a2640' }}>А. Дмитриев</a>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
