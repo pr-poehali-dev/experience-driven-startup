@@ -576,12 +576,14 @@ export default function Index() {
             <div className="luxury-card p-10 lg:p-14 mb-12">
               {/* Верхняя часть: картинки одной высоты */}
               <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-8">
-                <div className="flex justify-center items-center h-64 bg-white rounded-md">
-                  <img
-                    src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
-                    alt="Alto Livello Russia"
-                    className="h-32 object-contain px-4 py-2"
-                  />
+                <div className="flex justify-center items-center h-64">
+                  <div className="w-48 h-48 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <img
+                      src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
+                      alt="Alto Livello Russia"
+                      className="w-36 h-36 object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex justify-center items-center h-64">
                   <img
