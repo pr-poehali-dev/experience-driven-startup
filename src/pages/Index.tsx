@@ -204,6 +204,7 @@ export default function Index() {
     { href: "#cases", label: "Кейсы" },
     { href: "#testimonials", label: "Отзывы" },
     { href: "#calculator", label: "Стоимость" },
+    { href: "#brands", label: "Запуск Брендов" },
     { href: "#blog", label: "Блог" },
     { href: "#contact", label: "Контакты" },
   ];
@@ -554,6 +555,74 @@ export default function Index() {
       </section>
 
       {/* Contact */}
+      {/* Brand Launch */}
+      <section id="brands" className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <span className="section-label">Новое направление</span>
+              <h2 className="font-display text-4xl lg:text-5xl text-cream mt-4 gold-line-center">
+                Запуск Брендов
+              </h2>
+              <p className="text-cream-muted mt-8 max-w-xl mx-auto font-body text-sm leading-relaxed">
+                Полный цикл вывода нового бренда на рынок — от позиционирования и стратегии до первых продаж. Работаю с командой на всех этапах запуска.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {[
+              { icon: "Compass", title: "Позиционирование", desc: "Определяем уникальное место бренда на рынке, целевую аудиторию и ключевое сообщение, которое отличает вас от конкурентов." },
+              { icon: "Rocket", title: "Стратегия запуска", desc: "Разрабатываем пошаговый план выхода на рынок: каналы, бюджет, сроки и ключевые показатели успеха." },
+              { icon: "TrendingUp", title: "Рост продаж", desc: "Выстраиваем систему продаж с нуля — скрипты, воронка, обучение команды и контроль первых результатов." },
+            ].map((item, i) => (
+              <AnimatedSection key={i}>
+                <div className="luxury-card p-8 h-full">
+                  <div className="w-10 h-10 border border-gold-pale flex items-center justify-center mb-6">
+                    <Icon name={item.icon as "Compass"} size={18} className="text-gold" fallback="Star" />
+                  </div>
+                  <h3 className="font-display text-xl text-cream mb-3">{item.title}</h3>
+                  <p className="text-cream-muted text-sm leading-relaxed font-body">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <div className="luxury-card p-10 lg:p-14 grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <span className="section-label">Как это работает</span>
+                <h3 className="font-display text-3xl text-cream mt-4 mb-6">От идеи до первой выручки за 90 дней</h3>
+                <div className="space-y-4">
+                  {[
+                    "Аудит идеи и анализ рынка",
+                    "Разработка позиционирования и УТП",
+                    "Построение отдела продаж",
+                    "Запуск и сопровождение первых сделок",
+                  ].map((step, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-6 h-6 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-gold text-xs font-semibold">{i + 1}</span>
+                      </div>
+                      <p className="text-cream-muted text-sm font-body leading-relaxed">{step}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-6">
+                <div className="text-center p-6 border border-gold-pale">
+                  <div className="font-display text-5xl text-gold font-semibold">90</div>
+                  <div className="text-cream-muted text-xs font-body mt-2 uppercase tracking-wider">дней до результата</div>
+                </div>
+                <a href="#contact" className="btn-gold text-center py-4">
+                  Обсудить запуск бренда
+                </a>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section id="contact" className="py-24 lg:py-32 bg-navy-light">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <AnimatedSection>
