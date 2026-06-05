@@ -597,7 +597,7 @@ export default function Index() {
               <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="flex flex-col">
                 <p className="text-cream-muted text-base font-body leading-relaxed mb-6">
-                  Alto Livello — «высший уровень» в переводе с итальянского. Бренд создан для российского рынка премиальных продуктов питания. Под этим брендом выпускаются макаронные изделия высшего качества, ориентированные на взыскательного покупателя.
+                  <span className="font-display text-cream font-semibold text-lg">Alto Livello</span> — «высший уровень» в переводе с итальянского. Бренд создан для российского рынка премиальных продуктов питания. Под этим брендом выпускаются макаронные изделия высшего качества, ориентированные на взыскательного покупателя.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                   {[
