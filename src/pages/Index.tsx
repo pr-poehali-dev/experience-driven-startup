@@ -625,6 +625,37 @@ export default function Index() {
             </div>
           </AnimatedSection>
 
+          {/* Award */}
+          <AnimatedSection>
+            <div className="luxury-card p-8 lg:p-12 grid md:grid-cols-2 gap-8 items-center mb-12">
+              <div className="flex justify-center">
+                <img
+                  src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/db1d8f52-858c-4ea9-8f57-f7f4a89d8632.png"
+                  alt="Диплом лауреата Лучший продукт 2023"
+                  className="h-72 object-contain drop-shadow-lg"
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Award" size={20} className="text-gold" fallback="Star" />
+                  <span className="section-label">Признание качества</span>
+                </div>
+                <h3 className="font-display text-2xl text-cream mb-4">Золотая медаль «Лучший продукт — 2023»</h3>
+                <p className="text-cream-muted text-sm font-body leading-relaxed mb-6">
+                  Диплом лауреата Международного конкурса от Министерства сельского хозяйства РФ и Россельхознадзора. Награда присуждена на 30-й юбилейной выставке ПродЭкспо в Москве за макаронные изделия из муки твёрдых сортов пшеницы категории А высшего сорта.
+                </p>
+                <div className="space-y-2">
+                  {["Гнёзда Фетучине", "Гнёзда Фетучине с томатом", "Гнёзда Фетучине со шпинатом"].map((p, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></div>
+                      <span className="text-cream-muted text-sm font-body">{p}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
           {/* Services */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
