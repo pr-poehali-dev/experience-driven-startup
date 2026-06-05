@@ -379,41 +379,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <span className="section-label">Клиенты о работе</span>
-              <h2 className="font-display text-4xl lg:text-5xl text-cream mt-4 gold-line-center">
-                Отзывы
-              </h2>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <AnimatedSection key={i}>
-                <div className="luxury-card p-8 relative">
-                  <div className="quote-mark absolute top-4 right-6">"</div>
-                  <div className="flex gap-1 mb-6">
-                    {Array.from({ length: t.rating }).map((_, k) => (
-                      <Icon key={k} name="Star" size={12} className="text-gold" fallback="Star" />
-                    ))}
-                  </div>
-                  <p className="text-cream text-sm leading-relaxed font-body relative z-10">
-                    «{t.text}»
-                  </p>
-                  <div className="mt-6 pt-6 border-t border-gold-pale">
-                    <div className="font-display text-base text-cream">{t.name}</div>
-                    <div className="text-cream-muted text-xs font-body mt-1">{t.role}</div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Calculator */}
       <section id="calculator" className="py-24 lg:py-32 bg-navy-light">
