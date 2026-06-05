@@ -573,9 +573,10 @@ export default function Index() {
 
           {/* Brand showcase */}
           <AnimatedSection>
-            <div className="luxury-card p-10 lg:p-14 grid lg:grid-cols-2 gap-12 items-center mb-12">
-              <div>
-                <div className="flex items-center gap-4 mb-8">
+            <div className="luxury-card p-10 lg:p-14 mb-12">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="flex flex-col">
+                <div className="mb-8">
                   <img
                     src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
                     alt="Alto Livello Russia"
@@ -598,12 +599,12 @@ export default function Index() {
                   ))}
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="flex justify-center mb-6">
+              <div className="flex flex-col">
+                <div className="flex justify-center items-center mb-8 h-36">
                   <img
                     src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/f5d6e798-e3ef-4a63-b720-a38003723277.png"
                     alt="Alto Livello Fettuccine"
-                    className="h-48 object-contain drop-shadow-lg"
+                    className="h-full object-contain drop-shadow-lg"
                   />
                 </div>
                 <h3 className="font-display text-2xl text-cream mb-6">Что я сделал как основатель</h3>
@@ -621,6 +622,7 @@ export default function Index() {
                     <p className="text-cream-muted text-sm font-body leading-relaxed">{item.text}</p>
                   </div>
                 ))}
+              </div>
               </div>
             </div>
           </AnimatedSection>
