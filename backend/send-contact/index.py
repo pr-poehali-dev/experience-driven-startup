@@ -57,9 +57,37 @@ def handler(event: dict, context) -> dict:
     msg['To'] = to_email
     msg.attach(MIMEText(html, 'html', 'utf-8'))
 
+    auto_reply_html = f"""
+    <html><body style="font-family: Arial, sans-serif; color: #222; max-width: 600px; margin: 0 auto;">
+    <div style="border-top: 3px solid #b8902a; padding: 32px 0;">
+      <h2 style="font-family: Georgia, serif; color: #1a2640; font-size: 24px; margin-bottom: 8px;">Антон Дмитриев</h2>
+      <p style="color: #b8902a; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 32px;">Консультант по продажам</p>
+      <p style="font-size: 16px; line-height: 1.6;">{name}, добрый день!</p>
+      <p style="font-size: 15px; line-height: 1.7; color: #444;">
+        Ваша заявка получена. Я свяжусь с вами в течение <strong>4 часов</strong> для согласования времени диагностики.
+      </p>
+      <p style="font-size: 15px; line-height: 1.7; color: #444;">
+        Если вопрос срочный — напишите напрямую: <a href="mailto:dmitanton@yandex.ru" style="color: #b8902a;">dmitanton@yandex.ru</a>
+      </p>
+      <div style="border-top: 1px solid #e0d5c0; margin-top: 32px; padding-top: 24px; color: #888; font-size: 13px;">
+        С уважением,<br>
+        <strong style="color: #1a2640;">Антон Дмитриев</strong>
+      </div>
+    </div>
+    </body></html>
+    """
+
     with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
         server.login(smtp_user, smtp_password)
         server.sendmail(smtp_user, to_email, msg.as_string())
+
+        if '@' in contact:
+            auto_msg = MIMEMultipart('alternative')
+            auto_msg['Subject'] = 'Заявка получена — Антон Дмитриев'
+            auto_msg['From'] = smtp_user
+            auto_msg['To'] = contact
+            auto_msg.attach(MIMEText(auto_reply_html, 'html', 'utf-8'))
+            server.sendmail(smtp_user, contact, auto_msg.as_string())
 
     return {
         'statusCode': 200,
