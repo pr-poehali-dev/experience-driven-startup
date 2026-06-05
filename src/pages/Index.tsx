@@ -202,7 +202,6 @@ export default function Index() {
   const navLinks = [
     { href: "#services", label: "Услуги" },
     { href: "#cases", label: "Кейсы" },
-    { href: "#testimonials", label: "Отзывы" },
     { href: "#calculator", label: "Стоимость" },
     { href: "#brands", label: "Запуск Брендов" },
     { href: "#blog", label: "Блог" },
