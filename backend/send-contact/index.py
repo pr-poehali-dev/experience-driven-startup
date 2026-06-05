@@ -64,10 +64,10 @@ def handler(event: dict, context) -> dict:
       <p style="color: #b8902a; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 32px;">Консультант по продажам</p>
       <p style="font-size: 16px; line-height: 1.6;">{name}, добрый день!</p>
       <p style="font-size: 15px; line-height: 1.7; color: #444;">
-        Ваша заявка получена. Я свяжусь с вами в течение <strong>4 часов</strong> для согласования времени диагностики.
+        Спасибо Вам за выбор! В ближайшее время Мы свяжемся с Вами и ответим на все интересующие Вас вопросы!
       </p>
       <p style="font-size: 15px; line-height: 1.7; color: #444;">
-        Если вопрос срочный — напишите напрямую: <a href="mailto:dmitanton@yandex.ru" style="color: #b8902a;">dmitanton@yandex.ru</a>
+        Первая консультация для Вас будет <strong>абсолютно бесплатной!</strong>
       </p>
       <div style="border-top: 1px solid #e0d5c0; margin-top: 32px; padding-top: 24px; color: #888; font-size: 13px;">
         С уважением,<br>
