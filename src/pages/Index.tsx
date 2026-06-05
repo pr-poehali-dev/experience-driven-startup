@@ -599,6 +599,13 @@ export default function Index() {
                 </div>
               </div>
               <div className="space-y-4">
+                <div className="flex justify-center mb-6">
+                  <img
+                    src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/f5d6e798-e3ef-4a63-b720-a38003723277.png"
+                    alt="Alto Livello Fettuccine"
+                    className="h-48 object-contain drop-shadow-lg"
+                  />
+                </div>
                 <h3 className="font-display text-2xl text-cream mb-6">Что я сделал как основатель</h3>
                 {[
                   { icon: "Lightbulb", text: "Разработал концепцию и позиционирование бренда в премиальном сегменте" },
