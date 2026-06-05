@@ -230,7 +230,7 @@ export default function Index() {
             </div>
 
             <a href="#contact" className="hidden md:block btn-gold text-xs px-5 py-2.5">
-              Записаться
+              Действовать!
             </a>
 
             <button className="md:hidden text-cream" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
