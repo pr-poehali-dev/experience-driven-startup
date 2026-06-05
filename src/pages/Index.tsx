@@ -574,15 +574,26 @@ export default function Index() {
           {/* Brand showcase */}
           <AnimatedSection>
             <div className="luxury-card p-10 lg:p-14 mb-12">
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div className="flex flex-col">
-                <div className="flex justify-center mb-8">
+              {/* Верхняя часть: картинки одной высоты */}
+              <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-8">
+                <div className="flex justify-center items-center h-64 bg-white rounded-md">
                   <img
                     src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
                     alt="Alto Livello Russia"
-                    className="h-36 object-contain bg-white rounded-md px-4 py-2"
+                    className="h-32 object-contain px-4 py-2"
                   />
                 </div>
+                <div className="flex justify-center items-center h-64">
+                  <img
+                    src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/f5d6e798-e3ef-4a63-b720-a38003723277.png"
+                    alt="Alto Livello Fettuccine"
+                    className="h-full object-contain drop-shadow-lg"
+                  />
+                </div>
+              </div>
+              {/* Нижняя часть: текст в двух колонках */}
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="flex flex-col">
                 <p className="text-cream-muted text-sm font-body leading-relaxed mb-6">
                   Alto Livello — «высший уровень» в переводе с итальянского. Бренд создан для российского рынка премиальных продуктов питания. Под этим брендом выпускаются макаронные изделия высшего качества, ориентированные на взыскательного покупателя.
                 </p>
@@ -600,13 +611,6 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <div className="flex justify-center items-center mb-8 h-64">
-                  <img
-                    src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/f5d6e798-e3ef-4a63-b720-a38003723277.png"
-                    alt="Alto Livello Fettuccine"
-                    className="h-full object-contain drop-shadow-lg"
-                  />
-                </div>
                 <h3 className="font-display text-2xl text-cream mb-6">Что я сделал как основатель</h3>
                 {[
                   { icon: "Lightbulb", text: "Разработал концепцию и позиционирование бренда в премиальном сегменте" },
