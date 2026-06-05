@@ -579,7 +579,7 @@ export default function Index() {
                   <img
                     src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/15c23625-f40f-493e-b8bf-da6422f3b3cf.png"
                     alt="Alto Livello Russia"
-                    className="h-24 object-contain"
+                    className="h-36 object-contain bg-white rounded-md px-4 py-2"
                   />
                 </div>
                 <p className="text-cream-muted text-sm font-body leading-relaxed mb-6">
