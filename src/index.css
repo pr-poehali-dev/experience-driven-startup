@@ -4,45 +4,45 @@
 
 @layer base {
   :root {
-    --background: 220 25% 6%;
-    --foreground: 45 30% 92%;
+    --background: 214 30% 96%;
+    --foreground: 220 30% 15%;
 
-    --card: 220 22% 9%;
-    --card-foreground: 45 30% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
 
-    --popover: 220 22% 9%;
-    --popover-foreground: 45 30% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
 
-    --primary: 43 74% 58%;
-    --primary-foreground: 220 25% 6%;
+    --primary: 43 74% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 18% 14%;
-    --secondary-foreground: 45 20% 80%;
+    --secondary: 214 20% 90%;
+    --secondary-foreground: 220 30% 20%;
 
-    --muted: 220 18% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 214 20% 90%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 43 74% 58%;
-    --accent-foreground: 220 25% 6%;
+    --accent: 43 74% 48%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 18% 18%;
-    --input: 220 18% 14%;
-    --ring: 43 74% 58%;
+    --border: 214 20% 82%;
+    --input: 214 20% 90%;
+    --ring: 43 74% 48%;
 
     --radius: 0.25rem;
 
     /* Custom brand variables */
-    --navy: #0b1220;
-    --navy-light: #131d30;
-    --navy-mid: #1a2640;
-    --gold: #c9a84c;
-    --gold-light: #e4c87a;
-    --gold-pale: #f0d98a22;
-    --cream: #f0ead6;
-    --cream-muted: #b8ac96;
+    --navy: #f4f6f9;
+    --navy-light: #ffffff;
+    --navy-mid: #e8ecf2;
+    --gold: #b8902a;
+    --gold-light: #c9a84c;
+    --gold-pale: #b8902a22;
+    --cream: #1a2640;
+    --cream-muted: #4a5568;
   }
 }
 
@@ -60,6 +60,7 @@
     font-family: "IBM Plex Sans", sans-serif;
     background-color: var(--navy);
     color: var(--cream);
+    color-scheme: light;
   }
 
   h1,
@@ -203,6 +204,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  color: #4a5568;
 }
 .nav-link::after {
   content: "";
@@ -224,24 +226,25 @@
 /* Luxury card */
 .luxury-card {
   background: var(--navy-light);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(184, 144, 42, 0.2);
+  box-shadow: 0 2px 16px rgba(26, 38, 64, 0.06);
   transition:
     border-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 .luxury-card:hover {
-  border-color: rgba(201, 168, 76, 0.4);
+  border-color: rgba(184, 144, 42, 0.5);
   transform: translateY(-4px);
   box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(201, 168, 76, 0.05);
+    0 20px 60px rgba(26, 38, 64, 0.12),
+    0 0 30px rgba(184, 144, 42, 0.08);
 }
 
 /* Gold button */
 .btn-gold {
   background: var(--gold);
-  color: var(--navy);
+  color: #ffffff;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
@@ -258,7 +261,7 @@
 .btn-gold:hover {
   background: var(--gold-light);
   transform: translateY(-1px);
-  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+  box-shadow: 0 8px 30px rgba(184, 144, 42, 0.35);
 }
 
 /* Outline button */
@@ -349,7 +352,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--navy);
+  background: #e8ecf2;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(201, 168, 76, 0.4);
