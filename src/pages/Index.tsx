@@ -600,7 +600,7 @@ export default function Index() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <div className="flex justify-center items-center mb-8 h-36">
+                <div className="flex justify-center items-center mb-8 h-64">
                   <img
                     src="https://cdn.poehali.dev/projects/a372cb81-d736-4863-af6b-3d6f18a2ccc7/bucket/f5d6e798-e3ef-4a63-b720-a38003723277.png"
                     alt="Alto Livello Fettuccine"
