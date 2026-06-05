@@ -212,7 +212,7 @@ export default function Index() {
     <div className="min-h-screen bg-navy overflow-x-hidden">
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gold-pale" style={{ background: 'rgba(11,18,32,0.95)', backdropFilter: 'blur(12px)' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b" style={{ background: 'rgba(244,246,249,0.97)', backdropFilter: 'blur(12px)', borderColor: 'rgba(184,144,42,0.2)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
@@ -220,7 +220,7 @@ export default function Index() {
                 <div className="w-full h-px bg-gold"></div>
                 <div className="w-3/4 h-px bg-gold opacity-60"></div>
               </div>
-              <span className="font-display text-lg font-semibold text-cream tracking-wide">А. Дмитриев</span>
+              <span className="font-display text-lg font-semibold tracking-wide" style={{ color: '#1a2640' }}>А. Дмитриев</span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
@@ -233,14 +233,14 @@ export default function Index() {
               Записаться
             </a>
 
-            <button className="md:hidden text-cream" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <button className="md:hidden" style={{ color: '#1a2640' }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               <Icon name={mobileMenuOpen ? "X" : "Menu"} size={22} fallback="Menu" />
             </button>
           </div>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden bg-navy-light border-t border-gold-pale px-6 py-4 flex flex-col gap-4">
+          <div className="md:hidden border-t px-6 py-4 flex flex-col gap-4" style={{ background: '#ffffff', borderColor: 'rgba(184,144,42,0.2)' }}>
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="nav-link text-sm" onClick={() => setMobileMenuOpen(false)}>{l.label}</a>
             ))}
